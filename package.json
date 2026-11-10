@@ -1,0 +1,16 @@
+{
+  "name": "accessproof",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node frontend/build.mjs",
+    "test": "python -m unittest discover -s tests && node --test tests/chain.test.mjs"
+  },
+  "dependencies": {
+    "genlayer-js": "1.1.8"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

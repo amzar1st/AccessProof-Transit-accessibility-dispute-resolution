@@ -1,0 +1,17 @@
+{
+  "address": "0x4444dff24e88b06F19bc864574384C74638dE4Ed",
+  "demoCase": "49c0c3d6b11559c2302fd3c110b67bb613d3b064c44651c5c4a2aba18a0c3ad4",
+  "repository": "amzar1st/AccessProof-Transit-accessibility-dispute-resolution",
+  "initialUrl": "https://raw.githubusercontent.com/amzar1st/AccessProof-Transit-accessibility-dispute-resolution/8725b2517f5213f69c89c83cb60dea9c0cd1457f/evidence/harbor-initial.json",
+  "initialSha": "dfe6fa9c93d4c66cdc2e02c07404b90b37dfe62b832f4d40893f85e7abd58786",
+  "challengeUrl": "https://raw.githubusercontent.com/amzar1st/AccessProof-Transit-accessibility-dispute-resolution/8725b2517f5213f69c89c83cb60dea9c0cd1457f/evidence/harbor-west-map.json",
+  "challengeSha": "88328bc8c54370dccf31a21ac81c8d2ca9955dd903d16b587e511bd396edfe98",
+  "transactions": {
+    "Deploy": "0x41e7d3016e6bcb620c81185ef565cd3f6f162d09c0d8a9059e79f8cc686e2459",
+    "Open case": "0xf9e99e42ef49403fd67aa7687d8beb2c73cf87ec2ceed2d7d68d3cebfb451049",
+    "Review": "0xa5c2ab430668bf9a47f7d8f3145f8cbcb663a333aa596669f5aa7c371b7a9564",
+    "Challenge": "0x05761e9e3afbf08ddd2d2e6ff5afc02736cc3cc1764b26d919a911ae2f0c3999",
+    "Finalize": "0x524137d80ceb891108148ba15e77c25636fe89613967017d89a42602b9d7fe1c",
+    "Rejected replay": "0xc21d8792d1e67ebf83496c337a5408b52599d54e18934a34f7e2e05f2767db95"
+  }
+}

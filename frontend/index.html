@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Review historical step-free transit routes with evidence verified on GenLayer.">
+<title>AccessProof | Transit accessibility evidence</title>
+<link rel="stylesheet" href="./style.css">
+<script type="module" src="./app.js"></script>
+</head>
+<body>
+<header class="top"><div class="wrap mast">
+<a class="brand" href="./"><span aria-hidden="true">↗</span> AccessProof</a>
+<nav aria-label="Project links"><a id="repo" href="https://github.com/amzar1st/AccessProof-Transit-accessibility-dispute-resolution">Source ↗</a><a id="studio" href="https://studio.genlayer.com/">Open Studio ↗</a></nav>
+</div></header>
+<main class="wrap">
+<section class="hero" aria-labelledby="title">
+<div><p class="eyebrow">HISTORICAL TRANSIT ACCESSIBILITY</p><h1 id="title">Was there a<br><em>step-free route?</em></h1>
+<p class="intro">An elevator outage can close one entrance and leave another route open. AccessProof checks the entire route to the requested platform and keeps a public record of the evidence.</p>
+<div class="actions"><button id="demo" type="button">Load the Studionet demo</button><a id="contract" class="subtle">View contract ↗</a></div></div>
+<figure class="diagram" aria-labelledby="diagram-caption">
+<p class="eyebrow">CASE STUDY / HARBOR SQUARE</p>
+<div class="route"><span class="stop blocked"></span><div><b>Main entrance</b><small>Main lift out</small></div><span class="tag orange">BLOCKED</span></div>
+<div class="route"><span class="stop usable"></span><div><b>West entrance</b><small>Added by map challenge</small></div><span class="tag green">STEP-FREE</span></div>
+<div class="route"><span class="stop end"></span><div><b>Northbound platform</b><small>Requested direction</small></div></div>
+<figcaption id="diagram-caption">Illustration of the synthetic demo case.</figcaption>
+</figure>
+</section>
+<section class="notice"><strong>Studionet demonstration</strong><span>Harbor Square is fictional. This dashboard is for historical evidence review. For current NYC transit information, see the <a href="https://www.mta.info/elevator-escalator-status">MTA elevator and escalator status</a>.</span></section>
+<section class="panel" aria-labelledby="case-title">
+<div class="section-head"><div><p class="eyebrow">01 / PUBLIC RECORD</p><h2 id="case-title">Inspect a case</h2></div><span class="tag green">STUDIONET 61999</span></div>
+<form id="case-form">
+<label for="case-id">Case ID</label>
+<div class="inline"><input id="case-id" required pattern="[0-9a-f]{64}" placeholder="64-character case ID" spellcheck="false" autocomplete="off"><button>Read finalized state</button></div>
+</form>
+<p id="case-status" role="status">Load the demo or enter a case ID.</p>
+<div id="case-output"></div>
+</section>
+<div class="grid">
+<section class="panel" aria-labelledby="tx-title">
+<p class="eyebrow">02 / CONSENSUS RECEIPTS</p><h2 id="tx-title">Track a transaction</h2>
+<p>Follow consensus and see whether execution succeeded. A finalized transaction can still contain a failed execution.</p>
+<div id="demo-transactions" class="chips" aria-label="Demo transactions"></div>
+<form id="tx-form"><label for="hash">Transaction hash</label><input id="hash" required pattern="0x[0-9a-fA-F]{64}" spellcheck="false" autocomplete="off" placeholder="0x…"><button>Track transaction</button></form>
+<p id="tx-status" role="status"></p><a id="tx-link" hidden target="_blank" rel="noopener">Open in explorer ↗</a>
+</section>
+<section class="panel" aria-labelledby="write-title">
+<p class="eyebrow">03 / BUILT-IN STUDIO ACCOUNT</p><h2 id="write-title">Submit a transaction</h2>
+<p>Prepare arguments here, then sign and send in GenLayer Studio using its built-in account. In Studio, use <strong>Run and Debug</strong> with <strong>Normal (Full Consensus)</strong>. Paste the resulting hash into the tracker.</p>
+<label for="method">Contract method</label><select id="method"><option value="open_case">Open a case</option><option value="review">Review</option><option value="challenge">Challenge with new evidence</option><option value="finalize">Finalize</option></select>
+<div id="write-inputs"></div>
+<div class="actions"><button type="button" id="copy">Copy ordered arguments</button><a id="write-studio" target="_blank" rel="noopener">Open contract in Studio ↗</a></div>
+<p id="write-status" role="status"></p>
+</section>
+</div>
+<section class="panel" aria-labelledby="mta-title">
+<p class="eyebrow">04 / AGENCY DATA</p><h2 id="mta-title">MTA elevator outage feed</h2>
+<p>Look up reported active accessibility elevator outages from the MTA. This feed is shown separately from the archived evidence used to decide historical cases.</p>
+<form id="mta-form"><label for="mta-query">Station or equipment ID</label><div class="inline"><input id="mta-query" placeholder="Optional, for example 175 St" maxlength="80"><button>Fetch MTA feed</button></div></form>
+<p id="mta-status" role="status"></p><ul id="mta-results" class="route-list"></ul>
+<a href="https://api.mta.info/">MTA developer resources ↗</a>
+</section>
+</main>
+<footer class="wrap foot"><b>AccessProof</b><span>Route-level evidence on GenLayer Studionet</span></footer>
+</body></html>
