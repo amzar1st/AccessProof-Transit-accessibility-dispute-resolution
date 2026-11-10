@@ -1,0 +1,1 @@
+{"station":"harbor-square","from":"2026-10-20T08:00:00Z","to":"2026-10-20T09:00:00Z","maps":[{"platform":"northbound","complete":false,"routes":[{"entrance":"main","assets":["main-lift","north-lift"]}]}],"status":[{"asset":"main-lift","state":"out"},{"asset":"north-lift","state":"up"},{"asset":"west-lift","state":"up"},{"asset":"north-service","state":"up"}]}
